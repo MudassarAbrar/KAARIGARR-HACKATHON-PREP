@@ -1,0 +1,208 @@
+# ============================================================================
+# KARIGAR - GITIGNORE
+# Comprehensive .gitignore for Next.js + TypeScript + Security
+# ============================================================================
+
+# ============================================================================
+# ENVIRONMENT VARIABLES & SECRETS (CRITICAL - NEVER COMMIT)
+# ============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# API Keys and secrets
+secrets/
+*.pem
+*.key
+*.cert
+config/secrets.json
+.secrets
+
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
+/.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ============================================================================
+# NEXT.JS BUILD OUTPUT
+# ============================================================================
+.next/
+out/
+build/
+dist/
+.vercel
+
+# Next.js cache
+.next/cache/
+
+# ============================================================================
+# TESTING
+# ============================================================================
+coverage/
+*.coverage
+.nyc_output
+.jest/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# ============================================================================
+# TYPESCRIPT
+# ============================================================================
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================================================
+# LOGS
+# ============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# ============================================================================
+# OPERATING SYSTEM FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# EDITOR & IDE
+# ============================================================================
+
+# VSCode
+#.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============================================================================
+# DATABASE
+# ============================================================================
+*.db
+*.sqlite
+*.sqlite3
+dump.sql
+database.sql
+
+# ============================================================================
+# TEMPORARY FILES
+# ============================================================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~.nib
+*.orig
+
+# ============================================================================
+# UPLOADS & MEDIA (DO NOT COMMIT USER UPLOADS)
+# ============================================================================
+uploads/
+public/uploads/
+storage/
+.uploads/
+
+# ============================================================================
+# MISC
+# ============================================================================
+
+# Sentry
+.sentryclirc
+
+# Storybook
+storybook-static/
+
+# Service worker
+sw.js
+sw.js.map
+workbox-*.js
+workbox-*.js.map
+
+# PWA
+public/sw.js
+public/workbox-*.js
+
+# Thumbnails
+*.thumb
+
+# ============================================================================
+# SECURITY SCANNING RESULTS (OPTIONAL)
+# ============================================================================
+security-results/
+vulnerability-report.json
+
+# ============================================================================
+# CUSTOM PROJECT IGNORES
+# ============================================================================
+# Add your custom ignore patterns below
+
+# Mock data (if you want to exclude)
+# mocks/
+# fixtures/
+
+# Documentation builds (if auto-generated)
+# docs/build/
