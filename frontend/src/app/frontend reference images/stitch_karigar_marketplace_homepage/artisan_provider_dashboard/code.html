@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karigar | Artisan Provider Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-panel { backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-50 transition-all duration-300">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-icons-round">architecture</span>
+</div>
+<span class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">Karigar</span>
+</div>
+</div>
+<nav class="mt-4 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-semibold" href="#">
+<span class="material-icons-round">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons-round">pending_actions</span>
+<span>Service Requests</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons-round">handyman</span>
+<span>My Services</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons-round">calendar_today</span>
+<span>Calendar</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons-round">star_outline</span>
+<span>Reviews</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons-round">payments</span>
+<span>Earnings</span>
+</a>
+</nav>
+<div class="absolute bottom-8 left-0 w-full px-6">
+<div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Profile photo of a professional artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD95oB9LnUdbi9w_DzsNGz78kfmKtf71XZHyI9k87vyVY2KSx7aYtksFUuvvCLIzpCzZc2Z2a_h0sRLWuOPa14-piJlEkXTcM62wH4jha67P90EaIiAID4X3Q18IU2WqiAmK_MwNYtVD6RLTs09tbN50Wx52yzUIKGQmcJlB_iDhprYbBVjPX5Sslbg1oXpIcsDxj98igkIdP82Z4s0xcs9s9fdmUPeK4_ZSpPNpEPD56UESMwehmXqmsA0XG3e6FiMIvW9vwUuVY-C"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Rahul Sharma</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Master Carpenter</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 p-8">
+<!-- Header Bar -->
+<header class="flex items-center justify-between mb-10">
+<div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white">Welcome back, Rahul</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Here's what's happening with your services today.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+<span class="material-icons-round text-lg">event_available</span>
+                        Update Availability
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-primary text-slate-900 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 hover:opacity-90 transition-all">
+<span class="material-icons-round text-lg">add</span>
+                        Manage Services
+                    </button>
+<div class="w-px h-8 bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
+<span class="material-icons-round">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Key Performance Metrics -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Earnings</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-2xl font-extrabold">₹48,250</h3>
+<span class="text-emerald-500 text-xs font-bold flex items-center mb-1">
+<span class="material-icons-round text-sm">trending_up</span> 12%
+                        </span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Pending Requests</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-2xl font-extrabold">05</h3>
+<span class="bg-primary/20 text-primary px-2 py-0.5 rounded text-[10px] font-bold tracking-wider mb-1">URGENT</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Completed Jobs</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-2xl font-extrabold">124</h3>
+<span class="text-slate-400 dark:text-slate-500 text-xs font-medium mb-1">Lifetime</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Average Rating</p>
+<div class="flex items-end justify-between mt-2">
+<h3 class="text-2xl font-extrabold flex items-center gap-1">4.9 <span class="material-icons-round text-amber-400 text-xl">star</span></h3>
+<span class="text-slate-400 dark:text-slate-500 text-xs font-medium mb-1">98 Reviews</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-12 gap-8">
+<!-- Incoming Service Requests -->
+<section class="col-span-12 lg:col-span-7">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold">Incoming Service Requests</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-4">
+<!-- Request Card 1 -->
+<div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center gap-6 group hover:shadow-md transition-all">
+<div class="w-16 h-16 rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Customer portrait for service request" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8FOoNNcNCgtlcypV0IYJMTy17GuBq471U2yiXRbhtUL05p8q0LcPPwxq7jDqMQCpXy699KkA8PTxRDKW-XdT3IPtWy_3uCwM0WW0-ZdfxEuqQUjjE8-7fc1UbahEgOqs7PQQ5gWknXTvc5c7cAEiUuGWM-uan2A_q8RDohKOpA3lC_UlqvM1hABuVqKNsI3Su-x7mwirQ41gp8plRKvjX9aZb98kuWPSe6xytcu8sWoB7Pm_w5q3XIEB4NfEekDojG8hEdos4kYP"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-lg">Arjun Mehta</h4>
+<span class="text-xs font-bold text-slate-400">24 mins ago</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Custom Wardrobe Repair &amp; Polishing</p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-icons-round text-sm">location_on</span>
+                                        Indiranagar, 2.4 km
+                                    </div>
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-icons-round text-sm">schedule</span>
+                                        Tomorrow, 10:00 AM
+                                    </div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="px-5 py-2 bg-primary text-slate-900 rounded-lg text-xs font-bold hover:brightness-110">Accept</button>
+<button class="px-5 py-2 bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-300 rounded-lg text-xs font-bold hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-900/20 transition-all">Reject</button>
+</div>
+</div>
+<!-- Request Card 2 -->
+<div class="p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center gap-6 group hover:shadow-md transition-all">
+<div class="w-16 h-16 rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Client profile for service request" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmPCuIwqlu1AlSo6fB76U4rQr12n9EFtdPuXlgqDd-Ct6g4RS-zFj9F0A08_i4ldEmc2b803WUWPCGUPS79CdFiMcdCN_ljiTt1PNvtSh4M3g56B8fbxbK4xRvDPSmFgUFpObrrlUQncM6JFamyFrds0CTtrvW7rtfNZ6bNODw6OTK8Hjk4RF11-LNjuoYxPCnb4fiStaMmRHd4p0lCblopcCHgWK_odmnGOKg3afiFVC-a0d0Yfk7dNpIOlzhSvbwiVfNdurn6ohU"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-lg">Priya Singh</h4>
+<span class="text-xs font-bold text-slate-400">1 hour ago</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Modular Kitchen Installation (Partial)</p>
+<div class="flex items-center gap-4 mt-2">
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-icons-round text-sm">location_on</span>
+                                        Koramangala, 4.8 km
+                                    </div>
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-icons-round text-sm">schedule</span>
+                                        15 Oct, 09:30 AM
+                                    </div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="px-5 py-2 bg-primary text-slate-900 rounded-lg text-xs font-bold">Accept</button>
+<button class="px-5 py-2 bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-300 rounded-lg text-xs font-bold">Reject</button>
+</div>
+</div>
+</div>
+<!-- Performance Trends -->
+<div class="mt-10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold">Performance Analytics</h2>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded">Week</button>
+<button class="px-3 py-1 text-xs font-bold text-slate-400">Month</button>
+</div>
+</div>
+<div class="h-64 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 relative overflow-hidden">
+<div class="absolute inset-0 flex items-end px-6 pb-10 justify-between">
+<div class="w-12 bg-primary/20 rounded-t-lg h-[40%]"></div>
+<div class="w-12 bg-primary/20 rounded-t-lg h-[60%]"></div>
+<div class="w-12 bg-primary/20 rounded-t-lg h-[45%]"></div>
+<div class="w-12 bg-primary rounded-t-lg h-[85%] relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-2 py-1 rounded">₹12.4k</div>
+</div>
+<div class="w-12 bg-primary/20 rounded-t-lg h-[55%]"></div>
+<div class="w-12 bg-primary/20 rounded-t-lg h-[70%]"></div>
+<div class="w-12 bg-primary/20 rounded-t-lg h-[50%]"></div>
+</div>
+<div class="absolute bottom-4 left-6 right-6 flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Modules -->
+<section class="col-span-12 lg:col-span-5 space-y-8">
+<!-- Weekly Schedule -->
+<div>
+<h2 class="text-xl font-bold mb-6">Weekly Schedule</h2>
+<div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-4">
+<div class="grid grid-cols-7 gap-2 mb-4">
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">MON</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-slate-50 dark:bg-slate-800">11</div>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">TUE</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-primary text-slate-900 shadow-md">12</div>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">WED</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-slate-50 dark:bg-slate-800">13</div>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">THU</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-slate-50 dark:bg-slate-800">14</div>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">FRI</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-slate-50 dark:bg-slate-800">15</div>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">SAT</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-slate-50 dark:bg-slate-800">16</div>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-slate-400 font-bold mb-1">SUN</p>
+<div class="w-full aspect-square flex items-center justify-center rounded-lg text-sm font-bold bg-slate-50 dark:bg-slate-800">17</div>
+</div>
+</div>
+<div class="space-y-3 mt-6">
+<div class="flex gap-4 items-start pl-3 border-l-4 border-primary">
+<div class="pt-0.5">
+<p class="text-sm font-bold">09:00 - 11:30</p>
+<p class="text-xs text-slate-500">Service: Door Refurbishing</p>
+</div>
+</div>
+<div class="flex gap-4 items-start pl-3 border-l-4 border-slate-200 dark:border-slate-700">
+<div class="pt-0.5">
+<p class="text-sm font-bold">13:00 - 15:00</p>
+<p class="text-xs text-slate-500">Service: Site Survey - HSR Layout</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Reviews -->
+<div>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold">Recent Reviews</h2>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons-round text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 italic text-slate-600 dark:text-slate-300 relative">
+<span class="material-icons-round text-primary/30 absolute top-4 left-4 text-4xl">format_quote</span>
+<div class="relative z-10">
+<p class="text-sm leading-relaxed mb-6 pl-4">"Rahul's attention to detail is truly architectural. He didn't just fix the shelf, he redesigned the mounting to be more durable. Highly recommended for premium woodworking!"</p>
+<div class="flex items-center gap-3 not-italic">
+<img class="w-8 h-8 rounded-full" data-alt="Client avatar for testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbVVyQj553i0I8zkM1WAhiJf_tOw3cPHuIYoICzTaJ8MFd5V-pdLSupAL_RwlNYpph2MF_A5213mPr1W2jNkSLDPyeRhl51_xn-M7SUEfXs84HXX5Cq2PfZKeSV68QbUVTOuN_1B6-pbt17Wotl-b7dwVtKJhgeAlYzVAekEjpM-DVcgdko1u1fe7c6CdgJm689N1GN_cMe52r2fIi71osaltDc91J5fpNAbdGUWQkIGqWMumAYnqyM4xZul8xY9dtiSYvMOqpYdfE"/>
+<div>
+<p class="text-xs font-bold text-slate-900 dark:text-white">Sneha Kapoor</p>
+<div class="flex text-amber-400 text-[10px]">
+<span class="material-icons-round text-xs">star</span>
+<span class="material-icons-round text-xs">star</span>
+<span class="material-icons-round text-xs">star</span>
+<span class="material-icons-round text-xs">star</span>
+<span class="material-icons-round text-xs">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Status Toggle -->
+<div class="p-6 rounded-2xl bg-slate-900 dark:bg-primary/5 text-white border border-slate-800 overflow-hidden relative group">
+<div class="relative z-10 flex items-center justify-between">
+<div>
+<h4 class="font-bold text-lg">Active Status</h4>
+<p class="text-xs text-slate-400">You are currently visible to clients</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

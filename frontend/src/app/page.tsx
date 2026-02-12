@@ -1,19 +1,28 @@
+// import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import PremiumHeroSection from '@/components/home/PremiumHeroSection';
+import PremiumNavigation from '@/components/PremiumNavigation';
+// import HeroSection from '@/components/home/HeroSection';
+import ServicesSection from '@/components/home/ServicesSection';
+import HowItWorksSection from '@/components/home/HowItWorksSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">
-          Welcome to Karigar 🛠️
-        </h1>
-        <p className="text-xl text-gray-600">
-          Your platform for skilled workers
-        </p>
-        <div className="mt-8">
-          <p className="text-sm text-gray-500">
-            Frontend setup complete ✅
-          </p>
+    <>
+      <PremiumNavigation />
+      {/* <Navigation /> */}
+      <main className="overflow-x-hidden">
+        <PremiumHeroSection />
+        {/* <HeroSection /> */}
+        <div className="relative z-20 bg-background-light dark:bg-background-dark">
+            <ServicesSection />
+            <HowItWorksSection />
+            <TestimonialsSection />
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
+

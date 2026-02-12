@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karigar | Local Artisans Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .hero-tracking { letter-spacing: 0.8em; }
+        .glass-nav { backdrop-filter: blur(12px); }
+        .gradient-overlay { background: linear-gradient(to right, rgba(246, 248, 248, 0.9) 30%, rgba(246, 248, 248, 0) 100%); }
+        .dark .gradient-overlay { background: linear-gradient(to right, rgba(16, 32, 34, 0.95) 30%, rgba(16, 32, 34, 0) 100%); }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 antialiased transition-colors duration-300">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-white flex items-center gap-2" href="#">
+<span class="w-8 h-8 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-icons text-sm">architecture</span>
+</span>
+                    KARIGAR
+                </a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">How It Works</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-medium px-4 py-2 hover:text-primary transition-colors">Sign In</button>
+<button class="bg-primary text-background-dark font-bold text-sm px-6 py-2.5 rounded hover:opacity-90 transition-all">Register</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Professional Artisan at work" class="w-full h-full object-cover" data-alt="Professional electrician working with technical equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApCxb3vUj1g2BPuVpHYvFVTu7t8wG8JvR2tpErs8xJWWlDqp98LbzskrSqd9t5rfc5yUV6A64Nh9aWObf109m9Kkmx7cs0Q0hKjNCV5wcnLcrTXgRgO2XlNShxuoFsIoYtntBYRUcOFZFIq_j_1XyJdBKqTox2v4zJF9_bzSPC3K0IV2n8o_GS48zlRQ5AE9J6lgzXNkYBxCJf5GpFCrOL0Y93Q7yJ4vi3PJpcfZcRUXfzfspY0mznqh_ghQdn1l_9uqJP0FT8gEtJ"/>
+<div class="absolute inset-0 gradient-overlay"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<span class="hero-tracking text-xs uppercase font-light text-primary mb-4 block">K A R I G A R</span>
+<h1 class="text-6xl md:text-7xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6">
+                    Find Skilled Artisans <br/><span class="text-primary">Near You</span>
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl font-light leading-relaxed">
+                    Connecting you with trusted local service providers for all your home and commercial needs. Experience quality craftsmanship at your doorstep.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary/90 text-background-dark font-bold px-8 py-4 rounded-lg flex items-center gap-2 transition-all shadow-lg shadow-primary/20">
+                        Find a Service
+                        <span class="material-icons text-sm">arrow_forward</span>
+</button>
+<button class="border border-slate-300 dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:text-primary px-8 py-4 rounded-lg font-bold transition-all">
+                        Become a Provider
+                    </button>
+</div>
+<div class="mt-16 flex items-center gap-8">
+<div class="flex flex-col">
+<span class="text-2xl font-bold">500+</span>
+<span class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Verified Providers</span>
+</div>
+<div class="h-10 w-px bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex flex-col">
+<div class="flex text-primary">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+<span class="text-xs uppercase tracking-widest text-slate-500 font-semibold">4.9/5 Avg. Rating</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-white dark:bg-background-dark">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Our Services</h2>
+<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Service Cards -->
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">plumbing</span>
+<h3 class="font-bold text-lg">Plumbing</h3>
+<p class="text-sm text-slate-500 mt-2">Leaks, installations &amp; repairs</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">bolt</span>
+<h3 class="font-bold text-lg">Electrical</h3>
+<p class="text-sm text-slate-500 mt-2">Wiring, fixtures &amp; safety</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">carpenter</span>
+<h3 class="font-bold text-lg">Carpentry</h3>
+<p class="text-sm text-slate-500 mt-2">Furniture &amp; wood work</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">format_paint</span>
+<h3 class="font-bold text-lg">Painting</h3>
+<p class="text-sm text-slate-500 mt-2">Interior &amp; exterior finish</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">cleaning_services</span>
+<h3 class="font-bold text-lg">Cleaning</h3>
+<p class="text-sm text-slate-500 mt-2">Deep cleaning &amp; sanitizing</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">yard</span>
+<h3 class="font-bold text-lg">Gardening</h3>
+<p class="text-sm text-slate-500 mt-2">Landscaping &amp; maintenance</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">foundation</span>
+<h3 class="font-bold text-lg">Masonry</h3>
+<p class="text-sm text-slate-500 mt-2">Brickwork &amp; construction</p>
+</div>
+<div class="group p-8 border border-slate-100 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all cursor-pointer bg-slate-50 dark:bg-slate-900/50">
+<span class="material-icons text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">settings_input_component</span>
+<h3 class="font-bold text-lg">Appliances</h3>
+<p class="text-sm text-slate-500 mt-2">Repair &amp; servicing</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 bg-background-light dark:bg-slate-900/20">
+<div class="container mx-auto px-6">
+<div class="max-w-2xl mb-16">
+<h2 class="text-4xl font-bold mb-4">Simple Process, Quality Results</h2>
+<p class="text-slate-500">We've streamlined the way you find and hire local experts. Professional help is just a few clicks away.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12 relative">
+<div class="hidden md:block absolute top-12 left-0 w-full h-px bg-slate-200 dark:bg-slate-800 z-0"></div>
+<div class="relative z-10">
+<div class="w-16 h-16 bg-white dark:bg-background-dark border-4 border-primary rounded-full flex items-center justify-center mb-6 shadow-xl">
+<span class="text-xl font-bold text-slate-900 dark:text-white">01</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Search for Service</h3>
+<p class="text-slate-500 leading-relaxed">Browse through our extensive catalog of skilled artisans and select the service you need.</p>
+</div>
+<div class="relative z-10">
+<div class="w-16 h-16 bg-white dark:bg-background-dark border-4 border-primary rounded-full flex items-center justify-center mb-6 shadow-xl">
+<span class="text-xl font-bold text-slate-900 dark:text-white">02</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Book an Expert</h3>
+<p class="text-slate-500 leading-relaxed">Choose a verified provider based on ratings, reviews, and proximity to your location.</p>
+</div>
+<div class="relative z-10">
+<div class="w-16 h-16 bg-white dark:bg-background-dark border-4 border-primary rounded-full flex items-center justify-center mb-6 shadow-xl">
+<span class="text-xl font-bold text-slate-900 dark:text-white">03</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Get it Done</h3>
+<p class="text-slate-500 leading-relaxed">Relax while our professionals handle the task. Pay securely only after satisfaction.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-white dark:bg-background-dark overflow-hidden">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+<h2 class="text-4xl font-bold max-w-md">What our community is saying</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="p-10 rounded-2xl bg-slate-50 dark:bg-slate-900/50 relative">
+<span class="material-icons text-primary/20 text-6xl absolute top-8 right-10">format_quote</span>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-slate-200">
+<img alt="User" class="w-full h-full object-cover" data-alt="Portrait of a smiling young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClogkgEc_TgWCgIycNQwTgkFv5Po0Wni9ZCZL46dcnxPVk8MnBt_MgpCjs4Ec5WE2e-ppAg0RY-MToC3b8pUlR4hGqIE2AjbBbdK9d0eUVcrgk9HU7DXuasArFJTEOyoit59Mlvuc8L8-P12bgJC6RykABdX2ZEdBdFCmuGCYfzhN0abEulZiQGyrnoQcXFnx8CxaGm34g-VMzjPcFcS46AmZuJdOQz4Mvf4-C2J1VHoTjLskDFpBz_JzzogGsajKOMJLJBTipi8Bo"/>
+</div>
+<div>
+<h4 class="font-bold">Sarah Jenkins</h4>
+<p class="text-sm text-slate-500">Homeowner, Austin</p>
+</div>
+</div>
+<p class="text-lg italic text-slate-700 dark:text-slate-300">"Karigar made finding a plumber so easy. The provider was verified, arrived on time, and the quality of work was exceptional. Highly recommended!"</p>
+<div class="mt-6 flex text-primary">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+</div>
+<div class="p-10 rounded-2xl bg-slate-50 dark:bg-slate-900/50 relative">
+<span class="material-icons text-primary/20 text-6xl absolute top-8 right-10">format_quote</span>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-slate-200">
+<img alt="User" class="w-full h-full object-cover" data-alt="Portrait of a professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5pvW9mNZdJL_vnzKqxF4MFN0x_HTstVYsHSlnwJLhRRQyGQT-0r36c2_80JkqtAe-JYjTAOX7la5pIiWuMznNM8N-4DvFCm1q8Ck0m6mJAswTSW18zAmm53aZ4qKX43vZPO4Cw4dHB9SjydtieRVOmI0S5an5TnKVpkqB8hAbtlc0oR0EG0VLJagPz91PUJquDLUvwaHSwzZ3WF7wBvVps7yUhOrZc8d3QFiCfAOjz8mKG8taY54H4mnlFBafOChD1IyLJ2Uq__M"/>
+</div>
+<div>
+<h4 class="font-bold">David Chen</h4>
+<p class="text-sm text-slate-500">Business Owner, New York</p>
+</div>
+</div>
+<p class="text-lg italic text-slate-700 dark:text-slate-300">"As a restaurant owner, I need reliable electricians fast. Karigar has become my go-to platform for all maintenance needs. The transparency is great."</p>
+<div class="mt-6 flex text-primary">
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+<span class="material-icons text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-background-dark py-20 border-t border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<a class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-white flex items-center gap-2 mb-6" href="#">
+<span class="w-8 h-8 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-icons text-sm">architecture</span>
+</span>
+                        KARIGAR
+                    </a>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Connecting artisans and customers through a modern, secure, and hyperlocal marketplace. Building trust in every service.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-icons text-lg">facebook</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-icons text-lg">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-icons text-lg">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Quick Links</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Find Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Become a Provider</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">How it Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Safety Tips</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Newsletter</h5>
+<p class="text-sm text-slate-500 mb-4">Subscribe to get updates on local services and seasonal offers.</p>
+<div class="relative">
+<input class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="Email address" type="email"/>
+<button class="absolute right-1 top-1 bottom-1 bg-primary px-4 rounded text-background-dark font-bold text-xs uppercase transition-all hover:opacity-90">Join</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium tracking-widest uppercase">
+<p>© 2024 Karigar Marketplace. All rights reserved.</p>
+<div class="flex gap-8">
+<span>Privacy</span>
+<span>Terms</span>
+<span>Cookies</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karigar Administrative Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .sidebar-item-active { border-right: 3px solid #13daec; background: rgba(19, 218, 236, 0.05); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 flex flex-col bg-white dark:bg-background-dark sticky top-0 h-screen">
+<div class="p-8 flex items-center gap-2 mb-4">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons text-white text-sm">architecture</span>
+</div>
+<h1 class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white uppercase">Karigar</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="sidebar-item-active flex items-center gap-3 px-4 py-3 rounded-lg text-primary transition-all" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="font-semibold text-sm">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-icons text-[20px]">people</span>
+<span class="font-medium text-sm">Users</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-icons text-[20px]">engineering</span>
+<span class="font-medium text-sm">Providers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-icons text-[20px]">assignment</span>
+<span class="font-medium text-sm">Service Requests</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-icons text-[20px]">star_outline</span>
+<span class="font-medium text-sm">Reviews</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all" href="#">
+<span class="material-icons text-[20px]">insights</span>
+<span class="font-medium text-sm">Analytics</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all" href="#">
+<span class="material-icons text-[20px]">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+<div class="mt-4 px-4 py-4 bg-slate-50 dark:bg-slate-800/40 rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-300 dark:bg-slate-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of male admin administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPN0x_41kwCdzoBK9gXcb992eyXaWGIkiXXiOLmRK0y6EFhlbKh_lHrS93o9_-87vHs0xW3P86bTnYOGVD6OxobO4V_UqueUWIgLk3moTa6wxYzodesRxzIz5akhURh-e9sksHattYrkC9vzDaMmkUs5LI3mS6FoHMRcjZKCZtNFkXLyxkl79r6jHtjhY9DRlhR4V4bd_HC1vU5J4ccdn9-kdsl2uWVDQ97IuBSH9zCS5nsnUGER3O3a7YIEA916tsX5o5Wi0CHLp5"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold text-slate-900 dark:text-white truncate">Marcus Chen</p>
+<p class="text-[10px] text-slate-500 truncate">Senior Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 min-w-0 overflow-y-auto">
+<!-- Header -->
+<header class="h-20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-10 sticky top-0 z-10">
+<div>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Administrative Overview</h2>
+<p class="text-xs text-slate-500">Welcome back, Marcus. Here's what's happening today.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-icons text-slate-400 group-hover:text-primary cursor-pointer transition-colors">notifications</span>
+<span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 border-2 border-white dark:border-background-dark rounded-full"></span>
+</div>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700"></div>
+<button class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition-all">
+<span class="material-icons text-sm">add</span>
+                        Generate Report
+                    </button>
+</div>
+</header>
+<div class="p-10 space-y-10">
+<!-- KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-blue-50 dark:bg-blue-900/20 text-blue-500 rounded-lg material-icons">group</span>
+<span class="text-xs font-bold text-emerald-500 flex items-center">+12%</span>
+</div>
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Total Users</p>
+<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">24,592</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-primary/10 text-primary rounded-lg material-icons">engineering</span>
+<span class="text-xs font-bold text-slate-400 flex items-center">8.2k total</span>
+</div>
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Active Providers</p>
+<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">1,482</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border-2 border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-orange-50 dark:bg-orange-900/20 text-orange-500 rounded-lg material-icons">verified_user</span>
+<span class="animate-pulse text-xs font-bold text-orange-500">Action Required</span>
+</div>
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Pending Verifications</p>
+<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">24</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="p-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 rounded-lg material-icons">payments</span>
+<span class="text-xs font-bold text-emerald-500 flex items-center">+4.5%</span>
+</div>
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Monthly Revenue</p>
+<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">$42,910</h3>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-10">
+<!-- Left Section: Queue & Analytics -->
+<div class="col-span-12 lg:col-span-8 space-y-10">
+<!-- Provider Verification Queue -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-slate-900 dark:text-white">Provider Verification Queue</h3>
+<a class="text-xs font-bold text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/30 text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+<tr>
+<th class="px-6 py-4">Provider Info</th>
+<th class="px-6 py-4">Trade &amp; Exp.</th>
+<th class="px-6 py-4">Location</th>
+<th class="px-6 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Portrait of professional plumber service provider" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJl3FHBuzL2HwikhQ6EYNOOCAjoMq26OH9-C7YYpPkyx3ERS1v9lUBxbPLcCVv0MyGV0NFj2gSn7KmtZEAMHITTCQcc1U_vHmDokhD9f4w-HFb9Gbxo9rCR31dRXveqasaAb0Cb9UqXvN8X_KZE64DEtYnrcAQcUgwf25I9i3lSzCRUSD5W8A6qLF0zO0eZiZTkQ_fif0oGPodYsa33_As-g3AUhEQjlTzF_Q11SIOeEB40bV62v4WzocooIeF50pkgbPxYJarup2P"/>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Arjun Singh</p>
+<p class="text-xs text-slate-500">ID: #92831</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-700 w-fit">Plumber</span>
+<p class="text-xs text-slate-600 dark:text-slate-400">8 Years Experience</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">Mumbai, MH</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Approve</button>
+<button class="px-3 py-1.5 border border-slate-200 dark:border-slate-700 text-slate-400 text-xs font-bold rounded-lg hover:bg-red-50 hover:text-red-500 hover:border-red-100 transition-all">Reject</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Portrait of master electrician technician" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNGsYx3cNa_0EXYD9Q8xTyTLa9SJrT9QCb7VafS0viKL0e3ZYegvkAU_yT4iY3tXGK8q1d181y-gjt3MtKn41uazi7WmEvoC6VMKgnqXHSO6l-D_QeBxn8ek0eVnzF9Me5N2b-zMcBAr4SUePW3Umj7W5qloGbmUHpwcJAKfGapB9_jf6go_hXQjCo2T9gDMmYVoDhtPCh3objEpSd6HXMvrOOzEci7W2Ua1WjdEE7fVa2F-fYevkSd1wrcZEcRuo_Ow3jnHo0bmHL"/>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Priya Sharma</p>
+<p class="text-xs text-slate-500">ID: #92835</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700 w-fit">Electrician</span>
+<p class="text-xs text-slate-600 dark:text-slate-400">5 Years Experience</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">Bangalore, KA</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Approve</button>
+<button class="px-3 py-1.5 border border-slate-200 dark:border-slate-700 text-slate-400 text-xs font-bold rounded-lg hover:bg-red-50 hover:text-red-500 hover:border-red-100 transition-all">Reject</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Portrait of carpentry specialist professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8nm_0K2YGbaTaIuklaAHOqJ5nUt6O3pPmAmrDPfck8K5iMha8Kc-ybz7XWCTazkt_xAKHbXiNu_7N9XcxOtGAw1XsCQFfmRTAfskt9T24M5OX0VZ8SXHz4n0yxiCHk5myFQJNXApQgF3PiqlMJIUNODEzwbUgRcE0PhU6wFjSSz-orr8_OM3SlAb-jpewkkq_zgHnEkAyaHl_y7Lr1XO-DPOPPFPRxbIOVyLLXxHnKmsuS-_pj8t1aQHuRI-MX7B0I3d_CKGwcCX"/>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Vikram Rathore</p>
+<p class="text-xs text-slate-500">ID: #92839</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-stone-100 text-stone-700 w-fit">Carpentry</span>
+<p class="text-xs text-slate-600 dark:text-slate-400">12 Years Experience</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">Jaipur, RJ</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Approve</button>
+<button class="px-3 py-1.5 border border-slate-200 dark:border-slate-700 text-slate-400 text-xs font-bold rounded-lg hover:bg-red-50 hover:text-red-500 hover:border-red-100 transition-all">Reject</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Analytics Module -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800">
+<h3 class="font-bold text-slate-900 dark:text-white mb-6">Revenue Trends</h3>
+<div class="h-48 flex items-end justify-between gap-1">
+<div class="w-full bg-slate-50 dark:bg-slate-800 rounded-t-lg relative group overflow-hidden" style="height: 40%">
+<div class="absolute inset-0 bg-primary opacity-20 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="w-full bg-slate-50 dark:bg-slate-800 rounded-t-lg relative group overflow-hidden" style="height: 65%">
+<div class="absolute inset-0 bg-primary opacity-25 group-hover:opacity-45 transition-opacity"></div>
+</div>
+<div class="w-full bg-slate-50 dark:bg-slate-800 rounded-t-lg relative group overflow-hidden" style="height: 50%">
+<div class="absolute inset-0 bg-primary opacity-20 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="w-full bg-slate-50 dark:bg-slate-800 rounded-t-lg relative group overflow-hidden" style="height: 85%">
+<div class="absolute inset-0 bg-primary opacity-40 group-hover:opacity-60 transition-opacity"></div>
+</div>
+<div class="w-full bg-slate-50 dark:bg-slate-800 rounded-t-lg relative group overflow-hidden" style="height: 75%">
+<div class="absolute inset-0 bg-primary opacity-30 group-hover:opacity-50 transition-opacity"></div>
+</div>
+<div class="w-full bg-slate-50 dark:bg-slate-800 rounded-t-lg relative group overflow-hidden" style="height: 95%">
+<div class="absolute inset-0 bg-primary opacity-80 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] text-slate-400 font-bold uppercase tracking-wider px-1">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800">
+<h3 class="font-bold text-slate-900 dark:text-white mb-6">Service Completion</h3>
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold">
+<span class="text-slate-600 dark:text-slate-400">Electrical Repairs</span>
+<span class="text-primary">82%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 82%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold">
+<span class="text-slate-600 dark:text-slate-400">Plumbing</span>
+<span class="text-primary">64%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary/60" style="width: 64%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold">
+<span class="text-slate-600 dark:text-slate-400">AC Servicing</span>
+<span class="text-primary">91%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 91%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold">
+<span class="text-slate-600 dark:text-slate-400">House Painting</span>
+<span class="text-primary">45%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary/30" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Section: Activity Feed -->
+<div class="col-span-12 lg:col-span-4">
+<div class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm h-full">
+<h3 class="font-bold text-slate-900 dark:text-white mb-8 flex items-center justify-between">
+                                Recent Activity
+                                <span class="material-icons text-slate-300 text-sm">more_vert</span>
+</h3>
+<div class="relative space-y-8 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-slate-100 dark:before:bg-slate-800">
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white dark:bg-slate-900 border-2 border-primary flex items-center justify-center z-10">
+<span class="material-icons text-primary text-[10px]">person_add</span>
+</div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">New Artisan Registered</p>
+<p class="text-xs text-slate-500 mt-1">Rajesh K. applied for the Plumber role. Document verification pending.</p>
+<p class="text-[10px] text-slate-400 font-semibold mt-2 uppercase tracking-tight">2 minutes ago</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center z-10">
+<span class="material-icons text-slate-400 text-[10px]">task_alt</span>
+</div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Job #2041 Completed</p>
+<p class="text-xs text-slate-500 mt-1">Electrician Anita Rao finished "Full Circuit Rewiring" for client Sarah M.</p>
+<p class="text-[10px] text-slate-400 font-semibold mt-2 uppercase tracking-tight">45 minutes ago</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white dark:bg-slate-900 border-2 border-emerald-400 flex items-center justify-center z-10">
+<span class="material-icons text-emerald-400 text-[10px]">payment</span>
+</div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Payout Released</p>
+<p class="text-xs text-slate-500 mt-1">$450.00 released to 12 verified providers for weekly earnings.</p>
+<p class="text-[10px] text-slate-400 font-semibold mt-2 uppercase tracking-tight">2 hours ago</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white dark:bg-slate-900 border-2 border-orange-400 flex items-center justify-center z-10">
+<span class="material-icons text-orange-400 text-[10px]">report_problem</span>
+</div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Dispute Raised</p>
+<p class="text-xs text-slate-500 mt-1">Client Rahul V. raised a dispute regarding cleaning service quality.</p>
+<p class="text-[10px] text-slate-400 font-semibold mt-2 uppercase tracking-tight">5 hours ago</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center z-10">
+<span class="material-icons text-slate-400 text-[10px]">update</span>
+</div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">System Maintenance</p>
+<p class="text-xs text-slate-500 mt-1">Scheduled database optimization completed successfully.</p>
+<p class="text-[10px] text-slate-400 font-semibold mt-2 uppercase tracking-tight">Yesterday</p>
+</div>
+</div>
+<button class="w-full mt-10 py-3 rounded-lg border border-slate-100 dark:border-slate-800 text-xs font-bold text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all uppercase tracking-widest">
+                                Load More Activity
+                            </button>
+</div>
+</div>
+</div>
+<!-- Bottom Metrics -->
+<div class="bg-slate-900 dark:bg-primary/5 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 text-white">
+<div class="max-w-md">
+<h4 class="text-xl font-bold mb-2">Platform Performance Index</h4>
+<p class="text-slate-400 text-sm">Currently operating at 98.4% efficiency. All hyperlocal nodes in Mumbai and Bangalore are fully operational.</p>
+</div>
+<div class="flex gap-12 items-center">
+<div class="text-center">
+<p class="text-primary font-black text-3xl">4.9/5</p>
+<p class="text-[10px] uppercase font-bold text-slate-500 tracking-widest mt-1">Avg Provider Rating</p>
+</div>
+<div class="text-center">
+<p class="text-emerald-400 font-black text-3xl">22m</p>
+<p class="text-[10px] uppercase font-bold text-slate-500 tracking-widest mt-1">Avg Response Time</p>
+</div>
+<div class="text-center">
+<p class="text-blue-400 font-black text-3xl">94%</p>
+<p class="text-[10px] uppercase font-bold text-slate-500 tracking-widest mt-1">Retention Rate</p>
+</div>
+</div>
+</div>
+</div>
+<footer class="px-10 py-6 border-t border-slate-100 dark:border-slate-800 text-slate-400 text-[10px] flex justify-between items-center uppercase tracking-widest font-bold">
+<p>© 2024 Karigar Technologies. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Audit Logs</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

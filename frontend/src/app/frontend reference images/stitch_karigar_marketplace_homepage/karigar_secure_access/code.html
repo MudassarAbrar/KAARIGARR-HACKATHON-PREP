@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karigar | Secure Access</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .auth-tab-active {
+            border-bottom: 2px solid #13daec;
+            color: #13daec;
+        }
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 min-h-screen">
+<div class="flex flex-col lg:flex-row min-h-screen">
+<!-- Left Panel: Architectural Brand Showcase -->
+<div class="relative hidden lg:flex lg:w-1/2 xl:w-7/12 bg-slate-900 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Artisan Workshop" class="w-full h-full object-cover opacity-60" data-alt="Modern high-end architectural workshop with tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvPwRWJF1EriBcoyODDG-XG5GNgunbzPhWQjj7GnXFJWHj-iuRKxFgHDnvrjt8UpT5s___Kq6odEBIMqloaH9Bm6ZJJPN8zF7eKCNqQ4aadGdYI7H_VPwkUWBXukrPPNldpXWBUTNU3UGChe3e2a1tqgzIstuXrWvBuabBzj6O5BdLxJQiXFGaqmMEf31B3Csv8MY7Kmk2hj8wa7AGEPdS1QUDMfewfrCrHTUO3O_n3XBFyXIgSCroxfkgPTPXvzh26SUeTWQx4ksV"/>
+</div>
+<!-- Teal Overlay -->
+<div class="absolute inset-0 z-10 bg-gradient-to-tr from-background-dark/90 via-background-dark/40 to-primary/20"></div>
+<div class="relative z-20 flex flex-col justify-between p-16 w-full">
+<div>
+<h1 class="text-4xl font-extralight tracking-[0.6em] text-white uppercase mb-4">
+                        Karigar
+                    </h1>
+<div class="h-px w-24 bg-primary/60"></div>
+</div>
+<div class="max-w-md">
+<p class="text-6xl font-light text-white leading-tight mb-6">
+                        Excellence in every <span class="text-primary italic">craft.</span>
+</p>
+<p class="text-lg text-slate-300 font-light tracking-wide leading-relaxed">
+                        Connect with the most skilled artisans in your neighborhood. Secure, verified, and premium hyperlocal services.
+                    </p>
+</div>
+<div class="flex items-center space-x-4 text-white/50 text-sm tracking-widest uppercase">
+<span>Precision</span>
+<span class="w-1 h-1 rounded-full bg-primary"></span>
+<span>Trust</span>
+<span class="w-1 h-1 rounded-full bg-primary"></span>
+<span>Quality</span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Authentication Forms -->
+<div class="flex-1 flex flex-col justify-center items-center p-8 lg:p-16 bg-white dark:bg-background-dark/50">
+<div class="w-full max-w-md">
+<!-- Mobile Logo -->
+<div class="lg:hidden flex flex-col items-center mb-12">
+<h1 class="text-3xl font-extralight tracking-[0.4em] text-slate-900 dark:text-white uppercase mb-2">
+                        Karigar
+                    </h1>
+<div class="h-px w-16 bg-primary"></div>
+</div>
+<!-- Tab Switcher -->
+<div class="flex items-center space-x-8 mb-12 border-b border-slate-100 dark:border-slate-800">
+<button class="pb-4 text-sm font-semibold tracking-widest uppercase auth-tab-active">
+                        Sign In
+                    </button>
+<button class="pb-4 text-sm font-semibold tracking-widest uppercase text-slate-400 hover:text-slate-600 transition-colors">
+                        Register
+                    </button>
+</div>
+<!-- Sign In Form -->
+<div class="space-y-8">
+<div class="space-y-2">
+<h2 class="text-3xl font-light text-slate-900 dark:text-white">Welcome back</h2>
+<p class="text-slate-500 dark:text-slate-400 font-light">Access your secure Karigar dashboard.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-4">
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
+<input class="w-full bg-transparent border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-0 rounded-lg py-4 px-4 text-slate-800 dark:text-slate-200 placeholder:text-slate-300 transition-all font-light" placeholder="architect@karigar.com" type="email"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Password</label>
+<a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Forgot password?</a>
+</div>
+<input class="w-full bg-transparent border-slate-200 dark:border-slate-800 focus:border-primary focus:ring-0 rounded-lg py-4 px-4 text-slate-800 dark:text-slate-200 placeholder:text-slate-300 transition-all font-light" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Role Selector (Typically for Register, but visual placeholder for Register view) -->
+<div class="hidden group-[.register-view]:block space-y-4">
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">I want to join as a</label>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-primary bg-primary/5 text-primary text-sm font-medium" type="button">
+                                    Customer
+                                </button>
+<button class="flex items-center justify-center py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 text-sm font-medium" type="button">
+                                    Provider
+                                </button>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98]" type="submit">
+                            Sign In
+                        </button>
+</form>
+<!-- Divider -->
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-slate-100 dark:border-slate-800"></div>
+<span class="flex-shrink mx-4 text-xs font-semibold text-slate-400 uppercase tracking-[0.2em]">or continue with</span>
+<div class="flex-grow border-t border-slate-100 dark:border-slate-800"></div>
+</div>
+<!-- Social Login -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center space-x-3 py-3 px-6 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400">Google</span>
+</button>
+<button class="flex items-center justify-center space-x-3 py-3 px-6 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<svg class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewbox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+<span class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400">Facebook</span>
+</button>
+</div>
+</div>
+<!-- Footer Text -->
+<div class="mt-16 text-center">
+<p class="text-xs text-slate-400 font-light tracking-widest uppercase">
+                        Architectural Precision. Hyperlocal Speed.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

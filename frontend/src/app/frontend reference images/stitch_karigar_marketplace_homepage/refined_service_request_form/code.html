@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karigar | Request a Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#13daec",
+                "background-light": "#f6f8f8",
+                "background-dark": "#102022",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .letter-spacing-widest { letter-spacing: 0.5em; }
+        .step-transition { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen font-display">
+<!-- Navigation Header -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-outlined text-white text-xl">architecture</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight uppercase">Karigar</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs uppercase tracking-widest text-slate-400 mb-1">Step 1 of 3</span>
+<div class="w-48 h-1 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-primary"></div>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-5xl mx-auto px-6 py-16">
+<!-- Title Section -->
+<div class="text-center mb-16">
+<h1 class="text-3xl md:text-4xl font-light uppercase letter-spacing-widest text-slate-900 dark:text-white mb-4">
+                R e q u e s t  a  S e r v i c e
+            </h1>
+<p class="text-slate-500 dark:text-slate-400 font-light max-w-lg mx-auto">
+                Precision-driven hyperlocal services for the modern architectural lifestyle. Select your category to begin.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Form Steps (Active: Step 1) -->
+<div class="lg:col-span-8 space-y-12">
+<!-- STEP 1: CATEGORY SELECTION -->
+<section class="bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary text-sm font-bold">01</span>
+<h2 class="text-xl font-semibold">Service Classification</h2>
+</div>
+<!-- Searchable Input -->
+<div class="relative mb-8">
+<span class="material-icons-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-background-light dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm" placeholder="Search for a specific task (e.g. Italian Marble Polishing)" type="text"/>
+</div>
+<!-- Grid of Categories -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<button class="p-6 border-2 border-primary bg-primary/5 rounded-xl flex flex-col items-center gap-4 transition-all hover:border-primary group">
+<span class="material-icons-outlined text-primary text-3xl group-hover:scale-110 transition-transform">carpenter</span>
+<span class="text-xs uppercase tracking-widest font-bold">Carpentry</span>
+</button>
+<button class="p-6 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center gap-4 transition-all hover:border-primary group">
+<span class="material-icons-outlined text-slate-400 group-hover:text-primary text-3xl group-hover:scale-110 transition-transform">bolt</span>
+<span class="text-xs uppercase tracking-widest font-bold">Electrical</span>
+</button>
+<button class="p-6 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center gap-4 transition-all hover:border-primary group">
+<span class="material-icons-outlined text-slate-400 group-hover:text-primary text-3xl group-hover:scale-110 transition-transform">format_paint</span>
+<span class="text-xs uppercase tracking-widest font-bold">Painting</span>
+</button>
+<button class="p-6 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center gap-4 transition-all hover:border-primary group">
+<span class="material-icons-outlined text-slate-400 group-hover:text-primary text-3xl group-hover:scale-110 transition-transform">plumbing</span>
+<span class="text-xs uppercase tracking-widest font-bold">Plumbing</span>
+</button>
+<button class="p-6 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center gap-4 transition-all hover:border-primary group">
+<span class="material-icons-outlined text-slate-400 group-hover:text-primary text-3xl group-hover:scale-110 transition-transform">foundation</span>
+<span class="text-xs uppercase tracking-widest font-bold">Masonry</span>
+</button>
+<button class="p-6 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center gap-4 transition-all hover:border-primary group">
+<span class="material-icons-outlined text-slate-400 group-hover:text-primary text-3xl group-hover:scale-110 transition-transform">more_horiz</span>
+<span class="text-xs uppercase tracking-widest font-bold">Others</span>
+</button>
+</div>
+</section>
+<!-- STEP 2: LOGISTICS (PREVIEW) -->
+<section class="opacity-40 pointer-events-none bg-white dark:bg-slate-900/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-8 h-8 rounded-full border border-slate-300 flex items-center justify-center text-slate-400 text-sm font-bold">02</span>
+<h2 class="text-xl font-semibold">Schedule &amp; Location</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<label class="text-xs uppercase tracking-widest font-bold text-slate-500">Service Address</label>
+<div class="relative">
+<span class="material-icons-outlined absolute left-3 top-3 text-slate-400">place</span>
+<input class="w-full pl-10 pr-4 py-3 bg-background-light dark:bg-slate-800 border-none rounded-lg text-sm" type="text" value="124 Arcoria Boulevard, Apt 4B"/>
+</div>
+<div class="h-32 w-full rounded-lg overflow-hidden relative border border-slate-200 dark:border-slate-700">
+<img class="w-full h-full object-cover grayscale" data-alt="Minimalist grayscale map of a city street layout" data-location="Arcoria City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxqC6QH8TO_gFfGuEoiUqVBq10iJR8YmE11_28T1jYx7gU6HV3iArdY7kb3RWIk0C-fJoJLc_Jz6F98oWoCosjSISGwz5kqoxvZqLhd6GotVHUTAHa_hRjRDEICMVkCSXCoD65q9LVcFrAn1FCgkBU6gIfFjDPS0kwnN0Qd0yf-K8huKMoiiwhEYMt-yvnTOTz0diYhcPECrW6HSIjzL-_9fi3v27rGPo3AV1Gt5LNxH668Z7lCNnKUO_W9sdAxbNsoCVVPhHQ53xR"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-xs uppercase tracking-widest font-bold text-slate-500">Preferred Window</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-slate-800 text-xs font-semibold">MORNING</button>
+<button class="py-3 px-4 rounded-lg bg-background-light dark:bg-slate-800 text-xs font-semibold">AFTERNOON</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Controls -->
+<div class="flex items-center justify-between pt-8">
+<button class="px-8 py-3 text-xs uppercase tracking-widest font-bold text-slate-400 hover:text-slate-900 transition-colors">
+                        Back
+                    </button>
+<button class="px-12 py-4 bg-primary text-white rounded-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all font-bold uppercase tracking-widest text-sm">
+                        Continue
+                    </button>
+</div>
+</div>
+<!-- Right Column: Review & Estimation (Summary Sidebar) -->
+<div class="lg:col-span-4">
+<div class="sticky top-32 space-y-6">
+<!-- Review Card -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-6">Order Summary</h3>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-bold">Premium Carpentry</p>
+<p class="text-xs text-slate-500">Custom shelving install</p>
+</div>
+<span class="material-icons-outlined text-primary text-sm">check_circle</span>
+</div>
+<div class="flex justify-between items-start opacity-30">
+<div>
+<p class="text-sm font-bold">Schedule</p>
+<p class="text-xs text-slate-500">Not selected</p>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 pt-6">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs text-slate-500 uppercase">Estimated Range</span>
+<span class="text-xl font-extrabold text-primary">$120 - $185</span>
+</div>
+<p class="text-[10px] text-slate-400 leading-tight">
+                                Final quote will be provided by the artisan after the initial assessment.
+                            </p>
+</div>
+</div>
+<!-- Suggested Artisans -->
+<div class="bg-background-light/50 dark:bg-slate-900/30 p-6 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
+<h3 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-4">Top Rated Karigars</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover grayscale brightness-110" data-alt="Professional headshot of a male artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYAHjlAtr5D7sZja3-fVhYnxldg1XyYBYp0LkBlMXIxCXKu-y6GzmLMd-Q1MG7dLpGDsevVIKiI8UxBT9VDWk8L-NgGyo3Tx3p7diG3gooEd1OP4v7rsa4uR0UQCnVqTphtdzGvsdMkopUlxoG6kaZ_lb0TTn8YlK-g8l93yd43DxU05nLmgH0QBXPj_4Z1oB_WI2WwYZMpX1h00GwKIDrpPGno1S9gPzvO2CQ8Sj-9clBL3UeDXa00qMG6Qqmh3ZSbY-Px0rs5Pyj"/>
+<div>
+<p class="text-xs font-bold">David S. <span class="text-primary ml-1">★ 4.9</span></p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Master Carpenter • 12 yrs exp</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover grayscale brightness-110" data-alt="Professional headshot of a female artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdB2XSP9zaT6Hdnod-ujQFejXAhWzcFraLBaV32njlJpZtdlLbAHrI2pTB9kNS0GBrnNJPSHQe9-O8WBi5U8va93wJdTJiqplHHiATDMRYi8GaBMFq-D2RkT1Wl5bB3ie_xWoQbn2ILEQCT-qdp7PnZw8n9RupRFJiifYyKHQI4UzoGxi2YeWY-Q6HSeVzD2siTkAP7gVOPSQ5B1SA3N7D8ws-CSaBGmDGIxdv2k1n_WVbYIA1DjgMMmm5r4XKc2472RakUh-6jT3B"/>
+<div>
+<p class="text-xs font-bold">Elena M. <span class="text-primary ml-1">★ 4.8</span></p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Interior Specialist • 8 yrs exp</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Indicators -->
+<div class="flex items-center gap-2 justify-center text-slate-400">
+<span class="material-icons-outlined text-sm">verified_user</span>
+<span class="text-[10px] uppercase tracking-widest">Insured &amp; Verified Professionals</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Success Indicator (Hidden by default, shown for structure inspiration) -->
+<div class="hidden fixed inset-0 bg-background-light/95 dark:bg-background-dark/95 z-50 flex items-center justify-center p-6">
+<div class="max-w-md w-full text-center space-y-8">
+<div class="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto">
+<span class="material-icons-outlined text-primary text-5xl">done_all</span>
+</div>
+<div class="space-y-2">
+<h2 class="text-2xl font-bold uppercase tracking-widest">Request Confirmed</h2>
+<p class="text-slate-500">Your artisan is being notified. You will receive a confirmation within 15 minutes.</p>
+</div>
+<button class="w-full py-4 bg-primary text-white rounded-lg font-bold uppercase tracking-widest text-sm">
+                Track Status
+            </button>
+</div>
+</div>
+</body></html>

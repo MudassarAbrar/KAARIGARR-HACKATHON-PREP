@@ -1,8 +1,8 @@
-export default function PostCSS() {
-  return {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  }
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+  },
 }
+
+
